@@ -1,0 +1,16 @@
+//
+//  PrefixHeader.pch
+//  WeiXinFriendDemo
+//
+//  Created by WangLong on 16/11/11.
+//  Copyright © 2016年 WangLong. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+//获取屏幕 宽度高度
+#define WLScreen  [UIScreen mainScreen]
+#define SCREEN_WIDTH [WLScreen bounds].size.width
+#define SCREEN_HEIGHT [WLScreen bounds].size.height
+#endif /* PrefixHeader_pch */

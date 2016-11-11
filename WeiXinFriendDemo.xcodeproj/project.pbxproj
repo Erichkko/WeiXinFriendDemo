@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		FE6513321DD5E1AD00B1A905 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6513311DD5E1AD00B1A905 /* main.m */; };
 		FE6513351DD5E1AD00B1A905 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6513341DD5E1AD00B1A905 /* AppDelegate.m */; };
-		FE6513381DD5E1AD00B1A905 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6513371DD5E1AD00B1A905 /* ViewController.m */; };
 		FE65133B1DD5E1AD00B1A905 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE6513391DD5E1AD00B1A905 /* Main.storyboard */; };
 		FE65133D1DD5E1AD00B1A905 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE65133C1DD5E1AD00B1A905 /* Assets.xcassets */; };
 		FE6513401DD5E1AD00B1A905 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE65133E1DD5E1AD00B1A905 /* LaunchScreen.storyboard */; };
 		FE6513491DD5E2EF00B1A905 /* WLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6513481DD5E2EF00B1A905 /* WLViewController.m */; };
+		FE65134D1DD5FE2300B1A905 /* WLComment.m in Sources */ = {isa = PBXBuildFile; fileRef = FE65134C1DD5FE2300B1A905 /* WLComment.m */; };
+		FE6513511DD60A9C00B1A905 /* WLCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE65134F1DD60A9C00B1A905 /* WLCommentCell.m */; };
+		FE6513521DD60A9C00B1A905 /* WLCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6513501DD60A9C00B1A905 /* WLCommentCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,14 +23,18 @@
 		FE6513311DD5E1AD00B1A905 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FE6513331DD5E1AD00B1A905 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FE6513341DD5E1AD00B1A905 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FE6513361DD5E1AD00B1A905 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FE6513371DD5E1AD00B1A905 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FE65133A1DD5E1AD00B1A905 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE65133C1DD5E1AD00B1A905 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE65133F1DD5E1AD00B1A905 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE6513411DD5E1AD00B1A905 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE6513471DD5E2EF00B1A905 /* WLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLViewController.h; sourceTree = "<group>"; };
 		FE6513481DD5E2EF00B1A905 /* WLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLViewController.m; sourceTree = "<group>"; };
+		FE65134A1DD5F03B00B1A905 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		FE65134B1DD5FE2300B1A905 /* WLComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLComment.h; sourceTree = "<group>"; };
+		FE65134C1DD5FE2300B1A905 /* WLComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLComment.m; sourceTree = "<group>"; };
+		FE65134E1DD60A9C00B1A905 /* WLCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLCommentCell.h; sourceTree = "<group>"; };
+		FE65134F1DD60A9C00B1A905 /* WLCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLCommentCell.m; sourceTree = "<group>"; };
+		FE6513501DD60A9C00B1A905 /* WLCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLCommentCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +69,6 @@
 			children = (
 				FE6513331DD5E1AD00B1A905 /* AppDelegate.h */,
 				FE6513341DD5E1AD00B1A905 /* AppDelegate.m */,
-				FE6513361DD5E1AD00B1A905 /* ViewController.h */,
-				FE6513371DD5E1AD00B1A905 /* ViewController.m */,
 				FE6513391DD5E1AD00B1A905 /* Main.storyboard */,
 				FE65133C1DD5E1AD00B1A905 /* Assets.xcassets */,
 				FE65133E1DD5E1AD00B1A905 /* LaunchScreen.storyboard */,
@@ -72,6 +76,12 @@
 				FE6513301DD5E1AD00B1A905 /* Supporting Files */,
 				FE6513471DD5E2EF00B1A905 /* WLViewController.h */,
 				FE6513481DD5E2EF00B1A905 /* WLViewController.m */,
+				FE65134A1DD5F03B00B1A905 /* PrefixHeader.pch */,
+				FE65134B1DD5FE2300B1A905 /* WLComment.h */,
+				FE65134C1DD5FE2300B1A905 /* WLComment.m */,
+				FE65134E1DD60A9C00B1A905 /* WLCommentCell.h */,
+				FE65134F1DD60A9C00B1A905 /* WLCommentCell.m */,
+				FE6513501DD60A9C00B1A905 /* WLCommentCell.xib */,
 			);
 			path = WeiXinFriendDemo;
 			sourceTree = "<group>";
@@ -144,6 +154,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6513521DD60A9C00B1A905 /* WLCommentCell.xib in Resources */,
 				FE6513401DD5E1AD00B1A905 /* LaunchScreen.storyboard in Resources */,
 				FE65133D1DD5E1AD00B1A905 /* Assets.xcassets in Resources */,
 				FE65133B1DD5E1AD00B1A905 /* Main.storyboard in Resources */,
@@ -157,10 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE6513381DD5E1AD00B1A905 /* ViewController.m in Sources */,
 				FE6513351DD5E1AD00B1A905 /* AppDelegate.m in Sources */,
 				FE6513321DD5E1AD00B1A905 /* main.m in Sources */,
 				FE6513491DD5E2EF00B1A905 /* WLViewController.m in Sources */,
+				FE6513511DD60A9C00B1A905 /* WLCommentCell.m in Sources */,
+				FE65134D1DD5FE2300B1A905 /* WLComment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +291,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PE8RT9TWB9;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = WeiXinFriendDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = WeiXinFriendDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.demo.WeiXinFriendDemo;
@@ -291,6 +305,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PE8RT9TWB9;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = WeiXinFriendDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = WeiXinFriendDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.demo.WeiXinFriendDemo;
