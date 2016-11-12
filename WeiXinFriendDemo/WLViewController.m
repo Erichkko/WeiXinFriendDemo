@@ -9,6 +9,7 @@
 #import "WLViewController.h"
 #import "WLComment.h"
 #import "WLCommentCell.h"
+#import "WLHeaderView.h"
 
 @interface WLViewController ()<UITableViewDelegate,UITableViewDataSource>
 /** tableView*/
@@ -44,20 +45,17 @@ static NSString *headerId = @"commendheaderId";
 
 //init TableView
 - (void)initTableView{
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:(UITableViewStyleGrouped)];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.backgroundColor = [UIColor redColor];
+//    self.tableView.backgroundColor = [UIColor redColor];
 
     [self.tableView registerNib:[UINib nibWithNibName:@"WLCommentCell" bundle:nil] forCellReuseIdentifier:cellId];
-    
+    [self.tableView registerClass:[WLHeaderView class] forHeaderFooterViewReuseIdentifier:headerId];
     
     
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 44;
-    self.tableView.sectionHeaderHeight = 66;
-    
-    
     
     [self.view addSubview:self.tableView];
 }
@@ -122,20 +120,22 @@ static NSString *headerId = @"commendheaderId";
     return cell;
 }
 #pragma mark - 代理方法
+- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
 
+    WLHeaderView *headerView = (WLHeaderView *)[self tableView:self.tableView viewForHeaderInSection:section];
+//    NSLog(@"height == %f",headerView.frame.size.height);
+    return headerView.frame.size.height;
+}
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     
-    UIView *headerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"headerId"];
+    WLComment *comment = self.dataSource[section];
+    WLHeaderView *headerView = (WLHeaderView *)[tableView dequeueReusableHeaderFooterViewWithIdentifier:headerId];
     if (headerView == nil) {
-        headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 50)];
-        headerView.backgroundColor = [UIColor yellowColor];
-        UILabel *label = [[UILabel alloc] init];
-        label.frame = CGRectMake(0, 0, 60, 44);
-        [headerView addSubview:label];
-        label.text = [self.dataSource[section] timeStamp];
+        headerView = [[WLHeaderView alloc] initWithReuseIdentifier:headerId];
     }
+    [headerView setCommentModel:comment];
     return headerView;
 }
 @end

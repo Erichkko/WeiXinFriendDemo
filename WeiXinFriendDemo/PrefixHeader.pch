@@ -13,4 +13,8 @@
 #define WLScreen  [UIScreen mainScreen]
 #define SCREEN_WIDTH [WLScreen bounds].size.width
 #define SCREEN_HEIGHT [WLScreen bounds].size.height
+
+//标准间距 10
+#define kGAP 10
+
 #endif /* PrefixHeader_pch */
