@@ -16,6 +16,7 @@
 		FE65134D1DD5FE2300B1A905 /* WLComment.m in Sources */ = {isa = PBXBuildFile; fileRef = FE65134C1DD5FE2300B1A905 /* WLComment.m */; };
 		FE6513511DD60A9C00B1A905 /* WLCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE65134F1DD60A9C00B1A905 /* WLCommentCell.m */; };
 		FE6513521DD60A9C00B1A905 /* WLCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6513501DD60A9C00B1A905 /* WLCommentCell.xib */; };
+		FE90B9241DD745B800EF0B0F /* WLSpeedDial.m in Sources */ = {isa = PBXBuildFile; fileRef = FE90B9231DD745B800EF0B0F /* WLSpeedDial.m */; };
 		FEE030EB1DD6DEDC0049C6B7 /* WLHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE030EA1DD6DEDC0049C6B7 /* WLHeaderView.m */; };
 		FEE031101DD6EFD50049C6B7 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE030F21DD6EFD50049C6B7 /* MKAnnotationView+WebCache.m */; };
 		FEE031111DD6EFD50049C6B7 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE030F41DD6EFD50049C6B7 /* NSData+ImageContentType.m */; };
@@ -51,6 +52,8 @@
 		FE65134E1DD60A9C00B1A905 /* WLCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLCommentCell.h; sourceTree = "<group>"; };
 		FE65134F1DD60A9C00B1A905 /* WLCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLCommentCell.m; sourceTree = "<group>"; };
 		FE6513501DD60A9C00B1A905 /* WLCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLCommentCell.xib; sourceTree = "<group>"; };
+		FE90B9221DD745B800EF0B0F /* WLSpeedDial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLSpeedDial.h; path = ../WLSpeedDial.h; sourceTree = "<group>"; };
+		FE90B9231DD745B800EF0B0F /* WLSpeedDial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLSpeedDial.m; path = ../WLSpeedDial.m; sourceTree = "<group>"; };
 		FEE030E91DD6DEDC0049C6B7 /* WLHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLHeaderView.h; sourceTree = "<group>"; };
 		FEE030EA1DD6DEDC0049C6B7 /* WLHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLHeaderView.m; sourceTree = "<group>"; };
 		FEE030F11DD6EFD50049C6B7 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
@@ -124,6 +127,8 @@
 				FE65133E1DD5E1AD00B1A905 /* LaunchScreen.storyboard */,
 				FE6513411DD5E1AD00B1A905 /* Info.plist */,
 				FE6513301DD5E1AD00B1A905 /* Supporting Files */,
+				FE90B9221DD745B800EF0B0F /* WLSpeedDial.h */,
+				FE90B9231DD745B800EF0B0F /* WLSpeedDial.m */,
 				FE6513471DD5E2EF00B1A905 /* WLViewController.h */,
 				FE6513481DD5E2EF00B1A905 /* WLViewController.m */,
 				FE65134A1DD5F03B00B1A905 /* PrefixHeader.pch */,
@@ -276,6 +281,7 @@
 				FEE031131DD6EFD50049C6B7 /* SDWebImageCompat.m in Sources */,
 				FEE030EB1DD6DEDC0049C6B7 /* WLHeaderView.m in Sources */,
 				FE65134D1DD5FE2300B1A905 /* WLComment.m in Sources */,
+				FE90B9241DD745B800EF0B0F /* WLSpeedDial.m in Sources */,
 				FEE0311B1DD6EFD50049C6B7 /* UIImage+MultiFormat.m in Sources */,
 				FEE0311D1DD6EFD50049C6B7 /* UIImageView+HighlightedWebCache.m in Sources */,
 				FEE0311A1DD6EFD50049C6B7 /* UIImage+GIF.m in Sources */,

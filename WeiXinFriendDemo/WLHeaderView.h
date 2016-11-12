@@ -10,6 +10,9 @@
 
 @class WLComment;
 
+
+typedef void(^TapBlock)(NSInteger index,NSArray *dataSources);
+
 @interface WLHeaderView : UITableViewHeaderFooterView
 
 
@@ -31,4 +34,6 @@
 /** 数据模型*/
 @property (nonatomic,strong) WLComment *commentModel;
 
+
+@property (nonatomic,copy) TapBlock tapBlock;
 @end
