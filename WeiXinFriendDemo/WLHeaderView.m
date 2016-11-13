@@ -9,6 +9,7 @@
 #import "WLHeaderView.h"
 #import "WLComment.h"
 #import "UIImageView+WebCache.h"
+#import "WLSpeedDial.h"
 @implementation WLHeaderView
 
 - (instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier
@@ -51,8 +52,41 @@
                                  };
     CGSize size = [commentModel.commentText boundingRectWithSize:CGSizeMake(self.userNameLabel.frame.size.width - 2 * kGAP, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil].size;
     self.commnentTextLabel.frame = CGRectMake(self.userNameLabel.frame.origin.x, CGRectGetMaxY(self.timeStampLabel.frame) + kGAP, self.userNameLabel.frame.size.width - 2 * kGAP, size.height + 2 * kGAP);
-    //设置自身的Frame
-    self.frame = CGRectMake(0, 0, SCREEN_WIDTH, kGAP + self.avatarIv.frame.size.height + kGAP + self.commnentTextLabel.frame.size.height + kGAP );
+    
+    //解决图片重复利用的问题
+    for (UIView *view in self.subviews) {
+        if ([view isKindOfClass:[WLSpeedDial class]]) {
+            [view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+            [view removeFromSuperview];
+        }
+    }
+    
+    //计算九宫格的高度
+    CGFloat SpeedDialH = 0;
+    NSUInteger picCount =commentModel.commentPics.count;
+    if (picCount <= 3) {
+        SpeedDialH = [WLSpeedDial imageHeight] + kGAP;
+    }else if(picCount <= 6){
+        SpeedDialH = ([WLSpeedDial imageHeight] + kGAP) * 2;
+    }else if(picCount <=9){
+        SpeedDialH = ([WLSpeedDial imageHeight] + kGAP) * 3;
+    }
+    //初始化九宫格
+    if (commentModel.commentPics.count) {
+        self.speedDial = [[WLSpeedDial alloc] initWithFrame:CGRectMake(self.commnentTextLabel.frame.origin.x, CGRectGetMaxY(self.commnentTextLabel.frame), self.commnentTextLabel.frame.size.width, SpeedDialH) dataSource:commentModel.commentPics completeBlock:^(NSInteger index, NSArray *dataSource) {
+//            NSLog(@"index == %zd",index);
+            if (self.tapBlock) {
+                self.tapBlock(index,dataSource);
+            }
+        }];
+        [self addSubview:self.speedDial];
+        //设置自身的Frame
+        self.frame = CGRectMake(0, 0, SCREEN_WIDTH, kGAP + self.avatarIv.frame.size.height + kGAP + self.commnentTextLabel.frame.size.height + kGAP + SpeedDialH);
+    }else{
+        //设置自身的Frame
+        self.frame = CGRectMake(0, 0, SCREEN_WIDTH, kGAP + self.avatarIv.frame.size.height + kGAP + self.commnentTextLabel.frame.size.height + kGAP );
+    }
+    
     //设置各个控件的文字
     [self.avatarIv setImageWithURL:[NSURL URLWithString:commentModel.avatar] placeholderImage:nil];
     self.userNameLabel.text = commentModel.userName;

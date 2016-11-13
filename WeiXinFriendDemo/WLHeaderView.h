@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class WLComment;
+@class WLComment,WLSpeedDial;
 
 
 typedef void(^TapBlock)(NSInteger index,NSArray *dataSources);
@@ -34,6 +34,8 @@ typedef void(^TapBlock)(NSInteger index,NSArray *dataSources);
 /** 数据模型*/
 @property (nonatomic,strong) WLComment *commentModel;
 
+/** 九宫格模型*/
+@property (nonatomic,strong) WLSpeedDial *speedDial;
 
 @property (nonatomic,copy) TapBlock tapBlock;
 @end

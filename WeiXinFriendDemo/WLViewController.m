@@ -90,7 +90,7 @@ static NSString *headerId = @"commendheaderId";
             [self.dataSource addObject:comment];
         }
     }
-    NSLog(@"dataSource == %@",self.dataSource);
+//    NSLog(@"dataSource == %@",self.dataSource);
     [self performSelectorOnMainThread:@selector(refreshData) withObject:nil waitUntilDone:NO];
 }
 - (void)refreshData{
@@ -135,6 +135,9 @@ static NSString *headerId = @"commendheaderId";
     if (headerView == nil) {
         headerView = [[WLHeaderView alloc] initWithReuseIdentifier:headerId];
     }
+    headerView.tapBlock = ^(NSInteger index,NSArray *dataSource){
+        NSLog(@"点击了%ld张图片",index);
+    };
     [headerView setCommentModel:comment];
     return headerView;
 }

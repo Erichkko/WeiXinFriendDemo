@@ -47,7 +47,7 @@
 - (void)singleTapImageAction:(UITapGestureRecognizer *)tapGesture{
     UIImageView *tapView = (UIImageView *)tapGesture.view;
     if (self.tapBlock) {
-        NSLog(@"tag == %zd",tapView.tag);
+//        NSLog(@"tag == %zd",tapView.tag);
         self.tapBlock(tapView.tag,self.dataSources);
     }
 }
@@ -58,6 +58,6 @@
 }
 + (CGFloat)imageHeight
 {
-    return (SCREEN_HEIGHT - 5 * kGAP -35 - 50)/3;
+    return (SCREEN_WIDTH - 5 * kGAP -35 - 50)/3;
 }
 @end
